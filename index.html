@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purex Tissues | Premium Hygiene Products — Pakistan</title>
+<meta name="description" content="Purex Tissues — premium tissue boxes, toilet rolls, kitchen rolls, hand sanitizers & cleaning products, delivered across Pakistan.">
+
+<!-- Google Fonts: Fraunces (display) + Outfit (body/utility) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- =========================================================
+     LOADING SCREEN — signature "unfurling tissue sheet" animation
+     Controlled by: script.js -> initLoader()
+     Styled by: style.css -> #loading-screen, .fold-sheet
+     ========================================================= -->
+<div id="loading-screen">
+  <div class="fold-wrap">
+    <div class="fold-sheet"></div>
+    <div class="fold-sheet"></div>
+    <div class="fold-sheet"></div>
+  </div>
+  <p class="loader-text">Purex Tissues</p>
+</div>
+
+<!-- =========================================================
+     SCROLL PROGRESS BAR
+     Controlled by: script.js -> initScrollProgress()
+     ========================================================= -->
+<div id="scroll-progress"></div>
+
+<!-- =========================================================
+     STICKY NAVIGATION
+     Controlled by: script.js -> initNav(), initSearch(), initDarkMode(), initClock()
+     Styled by: style.css -> #navbar
+     ========================================================= -->
+<header id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="logo" aria-label="Purex Tissues home">
+      <span class="logo-mark">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 2C9 2 3 8.5 3 16c0 8.5 6 16 14 16s14-7.5 14-16C31 8.5 25 2 17 2Z" fill="url(#g1)"/>
+          <path d="M11 15c2-4 5-6 6-9 1 3 4 5 6 9-2 3-5 3-6 6-1-3-4-3-6-6Z" fill="#fff" opacity="0.9"/>
+          <defs><linearGradient id="g1" x1="3" y1="2" x2="31" y2="32"><stop stop-color="#8B2FD1"/><stop offset="1" stop-color="#4A0C73"/></linearGradient></defs>
+        </svg>
+      </span>
+      <span class="logo-word">Purex<em>Tissues</em></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#categories">Categories</a>
+      <a href="#offers">Special Offers</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#track-order">Track Order</a>
+      <a href="#contact">Contact</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav-tools">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search tissues, wipes, sanitizers…" aria-label="Search products">
+      </div>
+
+      <span class="live-clock" id="liveClock" title="Current time in Pakistan">--:--:--</span>
+
+      <button id="darkModeToggle" class="mode-toggle" aria-label="Toggle dark mode">
+        <span class="toggle-track"><span class="toggle-thumb"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></span></span>
+      </button>
+
+      <button id="cartToggle" class="cart-btn" aria-label="Open cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     HERO SECTION
+     Styled by: style.css -> #hero, .floating-tissue
+     ========================================================= -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <!-- floating decorative tissue graphics -->
+  <div class="floating-tissue t1"><i class="fa-solid fa-wind"></i></div>
+  <div class="floating-tissue t2"><i class="fa-solid fa-feather"></i></div>
+  <div class="floating-tissue t3"><i class="fa-solid fa-spa"></i></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Pakistan's Premium Hygiene Brand</p>
+    <h1>Purex Tissues</h1>
+    <p class="hero-sub">Premium Hygiene Products for Homes, Offices &amp; Businesses</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>50,000+</strong><span>Happy Customers</span></div>
+      <div><strong>100%</strong><span>Genuine Products</span></div>
+      <div><strong>All 4</strong><span>Provinces Covered</span></div>
+    </div>
+  </div>
+
+  <div class="wave-divider"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64 C240,120 480,0 720,32 C960,64 1200,120 1440,64 L1440,120 L0,120 Z"></path></svg></div>
+</section>
+
+<!-- =========================================================
+     ABOUT US
+     ========================================================= -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-media">
+      <img src="https://loremflickr.com/600/700/warehouse,tissue?lock=101" alt="Purex Tissues warehouse" loading="lazy">
+      <div class="about-badge"><strong>15+</strong><span>Years of Trust</span></div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow">About Purex Tissues</p>
+      <h2>Softness, delivered honestly.</h2>
+      <p>Purex Tissues was founded on a simple idea: everyday hygiene products should feel premium without costing a fortune. From our facilities we manufacture and distribute tissue boxes, toilet rolls, kitchen rolls, hand sanitizers and cleaning products to households, offices and businesses across Pakistan.</p>
+      <div class="about-points">
+        <div class="point"><i class="fa-solid fa-award"></i><div><h4>Uncompromising Quality</h4><p>Every batch is tested for softness, strength and absorbency before it reaches you.</p></div></div>
+        <div class="point"><i class="fa-solid fa-truck-fast"></i><div><h4>Fast, Nationwide Delivery</h4><p>From Karachi to Khyber Pakhtunkhwa, our fleet reaches you quickly and safely.</p></div></div>
+        <div class="point"><i class="fa-solid fa-heart"></i><div><h4>Customer First</h4><p>Our support team and easy returns policy exist so you always shop with confidence.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     WHY CHOOSE PUREX
+     ========================================================= -->
+<section id="why">
+  <div class="container">
+    <p class="eyebrow center">Why Choose Us</p>
+    <h2 class="center">Why Choose Purex</h2>
+    <div class="why-grid">
+      <div class="why-card"><i class="fa-solid fa-gem"></i><h4>Premium Quality</h4></div>
+      <div class="why-card"><i class="fa-solid fa-tags"></i><h4>Affordable Prices</h4></div>
+      <div class="why-card"><i class="fa-solid fa-truck"></i><h4>Fast Delivery</h4></div>
+      <div class="why-card"><i class="fa-solid fa-certificate"></i><h4>100% Genuine Products</h4></div>
+      <div class="why-card"><i class="fa-solid fa-boxes-stacked"></i><h4>Bulk Orders</h4></div>
+      <div class="why-card"><i class="fa-solid fa-building"></i><h4>Corporate Supply</h4></div>
+      <div class="why-card"><i class="fa-solid fa-warehouse"></i><h4>Wholesale Prices</h4></div>
+      <div class="why-card"><i class="fa-solid fa-headset"></i><h4>Excellent Support</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CATEGORIES
+     Populated by: script.js -> renderCategories()
+     ========================================================= -->
+<section id="categories">
+  <div class="container">
+    <p class="eyebrow center">Browse</p>
+    <h2 class="center">Shop by Category</h2>
+    <div class="category-grid" id="categoryGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- =========================================================
+     SPECIAL OFFERS
+     ========================================================= -->
+<section id="offers">
+  <div class="container">
+    <p class="eyebrow center">Limited Time</p>
+    <h2 class="center">Special Offers</h2>
+    <div class="offers-grid" id="offersGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- =========================================================
+     PRODUCTS
+     Populated by: script.js -> renderProducts(), used by search + filters
+     ========================================================= -->
+<section id="products">
+  <div class="container">
+    <p class="eyebrow center">Our Range</p>
+    <h2 class="center">Featured Products</h2>
+
+    <div class="product-filters" id="productFilters">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <!-- more chips injected by JS -->
+    </div>
+
+    <div class="product-grid" id="productGrid"><!-- injected by JS --></div>
+    <p class="no-results" id="noResults" hidden>No products match your search. Try another keyword.</p>
+  </div>
+</section>
+
+<!-- =========================================================
+     GALLERY
+     Populated by: script.js -> renderGallery(), initLightbox()
+     ========================================================= -->
+<section id="gallery">
+  <div class="container">
+    <p class="eyebrow center">Behind Purex</p>
+    <h2 class="center">Gallery</h2>
+    <div class="gallery-grid" id="galleryGrid"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- Lightbox overlay -->
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+  <img src="" alt="" id="lightboxImg">
+  <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<!-- =========================================================
+     TESTIMONIALS
+     Controlled by: script.js -> initTestimonialSlider()
+     ========================================================= -->
+<section id="testimonials">
+  <div class="container">
+    <p class="eyebrow center">Customer Love</p>
+    <h2 class="center">What Pakistan Says About Purex</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <p>“The tissue boxes are noticeably softer than what we used before, and delivery to our office in Lahore took less than two days.”</p>
+          <div class="t-author"><img src="https://i.pravatar.cc/60?img=32" alt=""><div><strong>Ayesha Raza</strong><span>Lahore</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <p>“We switched our restaurant's kitchen rolls and cleaning supplies to Purex. Bulk pricing is fair and the account manager is always responsive.”</p>
+          <div class="t-author"><img src="https://i.pravatar.cc/60?img=15" alt=""><div><strong>Bilal Sheikh</strong><span>Karachi</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <p>“Ordering online was simple, COD worked perfectly, and the sanitizer bottles arrived well packed. Will be reordering monthly.”</p>
+          <div class="t-author"><img src="https://i.pravatar.cc/60?img=47" alt=""><div><strong>Sana Malik</strong><span>Islamabad</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <p>“Best quality toilet rolls we've found locally — strong, soft, and the discount badges on the site make bulk buying easy to plan.”</p>
+          <div class="t-author"><img src="https://i.pravatar.cc/60?img=54" alt=""><div><strong>Hamza Iqbal</strong><span>Faisalabad</span></div></div>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TRACK ORDER
+     Controlled by: script.js -> initTrackOrder()
+     ========================================================= -->
+<section id="track-order">
+  <div class="container narrow">
+    <p class="eyebrow center">After You Order</p>
+    <h2 class="center">Track Your Order</h2>
+    <p class="center muted">Enter the Order ID you received at checkout to see a simulated delivery status.</p>
+    <div class="track-box">
+      <input type="text" id="trackInput" placeholder="e.g. PXT-48213">
+      <button class="btn btn-primary" id="trackBtn">Track</button>
+    </div>
+    <div class="track-result" id="trackResult" hidden></div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FAQ
+     Controlled by: script.js -> initFAQ()
+     ========================================================= -->
+<section id="faq">
+  <div class="container narrow">
+    <p class="eyebrow center">Need Help</p>
+    <h2 class="center">Frequently Asked Questions</h2>
+    <div class="faq-list" id="faqList"><!-- injected by JS --></div>
+  </div>
+</section>
+
+<!-- =========================================================
+     NEWSLETTER
+     ========================================================= -->
+<section id="newsletter">
+  <div class="container newsletter-box">
+    <div>
+      <h3>Join the Purex Family</h3>
+      <p>Get restock alerts, bulk-order deals and seasonal discounts straight to your inbox.</p>
+    </div>
+    <form id="newsletterForm" novalidate>
+      <input type="email" id="newsletterEmail" placeholder="you@example.com" required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+     Controlled by: script.js -> initContactForm()
+     ========================================================= -->
+<section id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Contact Us</h2>
+      <p class="contact-line"><i class="fa-solid fa-envelope"></i> purextissues@gmail.com</p>
+      <p class="contact-line"><i class="fa-solid fa-phone"></i> +92-300-1234567</p>
+      <p class="contact-line"><i class="fa-solid fa-location-dot"></i> Pakistan (Nationwide Delivery)</p>
+
+      <div class="contact-map">
+        <!-- Simplified Pakistan map widget, shared with checkout's delivery-location picker -->
+        <div class="pk-map" data-map-context="contact">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Pakistan_location_map.svg/480px-Pakistan_location_map.svg.png" alt="Map of Pakistan" class="pk-map-img">
+        </div>
+        <p class="muted small">Our support hours: Mon–Sat, 9am–8pm (PKT)</p>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <label>Name<input type="text" id="cName" required></label>
+      <label>Email<input type="email" id="cEmail" required></label>
+      <label>Phone<input type="tel" id="cPhone" required pattern="^[0-9+\-\s]{7,15}$"></label>
+      <label>Message<textarea id="cMessage" rows="4" required></textarea></label>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p class="form-status" id="contactStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer id="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#hero" class="logo footer-logo">
+        <span class="logo-mark small">
+          <svg width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 2C9 2 3 8.5 3 16c0 8.5 6 16 14 16s14-7.5 14-16C31 8.5 25 2 17 2Z" fill="#B98CE3"/></svg>
+        </span>
+        <span class="logo-word">Purex<em>Tissues</em></span>
+      </a>
+      <p>Premium hygiene products for homes, offices &amp; businesses — proudly serving all of Pakistan.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#track-order">Track Order</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <div>
+      <h4>Categories</h4>
+      <a href="#categories">Tissue Boxes</a>
+      <a href="#categories">Toilet Rolls</a>
+      <a href="#categories">Kitchen Rolls</a>
+      <a href="#categories">Hand Sanitizers</a>
+      <a href="#categories">Cleaning Products</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p><i class="fa-solid fa-envelope"></i> purextissues@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> +92-300-1234567</p>
+      <p><i class="fa-solid fa-location-dot"></i> Pakistan</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Purex Tissues. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#" id="privacyLink">Privacy Policy</a>
+      <a href="#" id="termsLink">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- =========================================================
+     CART DRAWER
+     Controlled by: script.js -> cart module (addToCart, renderCart, etc.)
+     ========================================================= -->
+<div class="overlay" id="drawerOverlay"></div>
+
+<aside id="cartDrawer" class="drawer">
+  <div class="drawer-head">
+    <h3><i class="fa-solid fa-cart-shopping"></i> Your Cart</h3>
+    <button id="closeCart" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"><!-- injected by JS --></div>
+  <div class="cart-summary">
+    <div class="row"><span>Subtotal</span><span id="cartSubtotal">Rs. 0</span></div>
+    <div class="row"><span>Delivery</span><span id="cartDelivery">Rs. 0</span></div>
+    <div class="row total"><span>Grand Total</span><span id="cartGrandTotal">Rs. 0</span></div>
+    <button class="btn btn-primary full" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</aside>
+
+<!-- =========================================================
+     QUICK VIEW MODAL
+     Controlled by: script.js -> openQuickView()
+     ========================================================= -->
+<div class="modal-overlay" id="quickViewOverlay">
+  <div class="modal quickview-modal" id="quickViewModal"><!-- injected by JS --></div>
+</div>
+
+<!-- =========================================================
+     CHECKOUT MODAL
+     Controlled by: script.js -> checkout module
+     ========================================================= -->
+<div class="modal-overlay" id="checkoutOverlay">
+  <div class="modal checkout-modal">
+    <button class="modal-close" id="closeCheckout" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></button>
+    <h3>Checkout</h3>
+
+    <div class="checkout-steps">
+      <span class="step active" data-step="1">1. Details</span>
+      <span class="step" data-step="2">2. Delivery Location</span>
+      <span class="step" data-step="3">3. Payment</span>
+      <span class="step" data-step="4">4. Confirm</span>
+    </div>
+
+    <!-- STEP 1: Customer + Address details -->
+    <form id="checkoutForm" class="checkout-step-panel" data-panel="1">
+      <div class="form-grid">
+        <label>Customer Name<input type="text" id="ordName" required></label>
+        <label>Phone Number<input type="tel" id="ordPhone" required pattern="^[0-9+\-\s]{7,15}$"></label>
+        <label>Email<input type="email" id="ordEmail" required></label>
+        <label>House Number<input type="text" id="ordHouse" required></label>
+        <label>Street<input type="text" id="ordStreet" required></label>
+        <label>Area<input type="text" id="ordArea" required></label>
+        <label>City<input type="text" id="ordCity" required></label>
+        <label>Province
+          <select id="ordProvince" required>
+            <option value="">Select Province</option>
+            <option>Punjab</option>
+            <option>Sindh</option>
+            <option>Khyber Pakhtunkhwa</option>
+            <option>Balochistan</option>
+            <option>Gilgit-Baltistan</option>
+            <option>Azad Kashmir</option>
+            <option>Islamabad Capital Territory</option>
+          </select>
+        </label>
+        <label>Postal Code<input type="text" id="ordPostal" required pattern="^[0-9]{4,5}$"></label>
+      </div>
+      <button type="button" class="btn btn-primary full step-next" data-goto="2">Continue to Delivery Location</button>
+    </form>
+
+    <!-- STEP 2: Map-based delivery location picker (Pakistan only) -->
+    <div class="checkout-step-panel" data-panel="2" hidden>
+      <p class="muted">Click anywhere on the map to drop a pin. Delivery is limited to locations within Pakistan.</p>
+      <div class="pk-map" id="checkoutMap" data-map-context="checkout">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Pakistan_location_map.svg/480px-Pakistan_location_map.svg.png" alt="Map of Pakistan — click to select delivery location" class="pk-map-img">
+        <div class="pk-pin" id="checkoutPin" hidden><i class="fa-solid fa-location-dot"></i></div>
+      </div>
+      <div class="map-readout">
+        <p>Latitude: <strong id="mapLat">—</strong></p>
+        <p>Longitude: <strong id="mapLng">—</strong></p>
+        <p>Approximate Region: <strong id="mapRegion">—</strong></p>
+      </div>
+      <p class="map-warning" id="mapWarning" hidden><i class="fa-solid fa-triangle-exclamation"></i> Please select a location inside Pakistan to continue.</p>
+      <div class="step-nav">
+        <button type="button" class="btn btn-outline step-next" data-goto="1">Back</button>
+        <button type="button" class="btn btn-primary step-next" data-goto="3" id="confirmLocationBtn">Confirm Location</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: Payment method -->
+    <div class="checkout-step-panel" data-panel="3" hidden>
+      <div class="payment-options" id="paymentOptions">
+        <label class="pay-option"><input type="radio" name="payment" value="COD" checked><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</label>
+        <label class="pay-option"><input type="radio" name="payment" value="Bank Transfer"><i class="fa-solid fa-building-columns"></i> Bank Transfer</label>
+        <label class="pay-option"><input type="radio" name="payment" value="JazzCash"><i class="fa-solid fa-mobile-screen-button"></i> JazzCash</label>
+        <label class="pay-option"><input type="radio" name="payment" value="EasyPaisa"><i class="fa-solid fa-wallet"></i> EasyPaisa</label>
+        <label class="pay-option"><input type="radio" name="payment" value="Card"><i class="fa-solid fa-credit-card"></i> Debit/Credit Card</label>
+      </div>
+      <div class="step-nav">
+        <button type="button" class="btn btn-outline step-next" data-goto="2">Back</button>
+        <button type="button" class="btn btn-primary step-next" data-goto="4">Review Order</button>
+      </div>
+    </div>
+
+    <!-- STEP 4: Order summary + place order -->
+    <div class="checkout-step-panel" data-panel="4" hidden>
+      <div id="orderSummary" class="order-summary"><!-- injected by JS --></div>
+      <button type="button" class="btn btn-primary full" id="placeOrderBtn">Place Order</button>
+    </div>
+
+    <!-- Order confirmation -->
+    <div class="checkout-step-panel" data-panel="done" hidden>
+      <div class="order-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <h4>Order Placed Successfully!</h4>
+        <p>Your Order ID:</p>
+        <p class="order-id" id="generatedOrderId">—</p>
+        <p class="muted">Save this ID to track your order using the Track Order section.</p>
+        <button type="button" class="btn btn-primary" id="closeSuccessBtn">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sound for button clicks (base64 tiny click, silent-safe) -->
+<audio id="clickSound" preload="auto"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
